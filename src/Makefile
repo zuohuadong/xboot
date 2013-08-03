@@ -193,6 +193,17 @@ INCDIRS	+=	external/chipmunk-6.1.5/include/chipmunk \
 SRCDIRS	+=	external/chipmunk-6.1.5/src \
 			 	external/chipmunk-6.1.5/src/constraints
 
+INCDIRS	+= 	external/lwip-1.4.1/include \
+			external/lwip-1.4.1/include/ipv4 \
+			external/lwip-1.4.1/ports/include
+SRCDIRS	+=	external/lwip-1.4.1/api \
+			external/lwip-1.4.1/core \
+			external/lwip-1.4.1/core/ipv4 \
+			external/lwip-1.4.1/core/snmp \
+			external/lwip-1.4.1/netif/ \
+			external/lwip-1.4.1/netif/ppp \
+			external/lwip-1.4.1/ports
+
 #
 # You shouldn't need to change anything below this point.
 #
