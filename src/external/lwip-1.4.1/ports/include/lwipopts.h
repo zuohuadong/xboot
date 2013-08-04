@@ -5,24 +5,12 @@
 extern "C" {
 #endif
 
-/*
-   -----------------------------------------------
-   ---------- Platform specific locking ----------
-   -----------------------------------------------
-*/
-
 /** 
  * NO_SYS==1: Provides VERY minimal functionality. Otherwise,
  * use lwIP facilities.
  */
 #define NO_SYS                          1
 
-
-/*
-   ------------------------------------
-   ---------- Memory options ----------
-   ------------------------------------
-*/
 /**
  * MEM_ALIGNMENT: should be set to the alignment of the CPU
  *    4 byte alignment -> #define MEM_ALIGNMENT 4
@@ -36,12 +24,6 @@ extern "C" {
  */
 #define MEM_SIZE                        16000
 
-
-/*
-   ------------------------------------------------
-   ---------- Internal Memory Pool Sizes ----------
-   ------------------------------------------------
-*/
 /**
  * MEMP_NUM_PBUF: the number of memp struct pbufs (used for PBUF_ROM and PBUF_REF).
  * If the application sends a lot of data out of ROM (or other static memory),
@@ -124,21 +106,11 @@ extern "C" {
  */
 #define PBUF_POOL_SIZE                  32
 
-/*
-   ---------------------------------
-   ---------- ARP options ----------
-   ---------------------------------
-*/
 /**
  * LWIP_ARP==1: Enable ARP functionality.
  */
 #define LWIP_ARP                        1
 
-/*
-   --------------------------------
-   ---------- IP options ----------
-   --------------------------------
-*/
 /**
  * IP_FORWARD==1: Enables the ability to forward IP packets across network
  * interfaces. If you are going to run lwIP on a device with only one network
@@ -194,11 +166,6 @@ extern "C" {
  */
 #define IP_DEFAULT_TTL                  255
 
-/*
-   ----------------------------------
-   ---------- ICMP options ----------
-   ----------------------------------
-*/
 /**
  * LWIP_ICMP==1: Enable ICMP module inside the IP stack.
  * Be careful, disable that make your product non-compliant to RFC1122
@@ -210,41 +177,21 @@ extern "C" {
  */
 #define ICMP_TTL                       (IP_DEFAULT_TTL)
 
-/*
-   ---------------------------------
-   ---------- RAW options ----------
-   ---------------------------------
-*/
 /**
  * LWIP_RAW==1: Enable application layer to hook into the IP layer itself.
  */
-#define LWIP_RAW                        0
+#define LWIP_RAW                        1
 
-/*
-   ----------------------------------
-   ---------- DHCP options ----------
-   ----------------------------------
-*/
 /**
  * LWIP_DHCP==1: Enable DHCP module.
  */
 #define LWIP_DHCP                       0
 
-/*
-   ------------------------------------
-   ---------- AUTOIP options ----------
-   ------------------------------------
-*/
 /**
  * LWIP_AUTOIP==1: Enable AUTOIP module.
  */
 #define LWIP_AUTOIP                     0
 
-/*
-   ----------------------------------
-   ---------- SNMP options ----------
-   ----------------------------------
-*/
 /**
  * LWIP_SNMP==1: Turn on SNMP module. UDP must be available for SNMP
  * transport.
@@ -252,32 +199,17 @@ extern "C" {
 #define LWIP_SNMP                       0
 #define SNMP_PRIVATE_MIB                0
 
-/*
-   ----------------------------------
-   ---------- IGMP options ----------
-   ----------------------------------
-*/
 /**
  * LWIP_IGMP==1: Turn on IGMP module. 
  */
 #define LWIP_IGMP                       0
 
-/*
-   ----------------------------------
-   ---------- DNS options -----------
-   ----------------------------------
-*/
 /**
  * LWIP_DNS==1: Turn on DNS module. UDP must be available for DNS
  * transport.
  */
 #define LWIP_DNS                        0
 
-/*
-   ---------------------------------
-   ---------- UDP options ----------
-   ---------------------------------
-*/
 /**
  * LWIP_UDP==1: Turn on UDP.
  */
@@ -293,21 +225,11 @@ extern "C" {
  */
 #define UDP_TTL                         (IP_DEFAULT_TTL)
 
-/*
-   ---------------------------------
-   ---------- TCP options ----------
-   ---------------------------------
-*/
 /**
  * LWIP_TCP==1: Turn on TCP.
  */
 #define LWIP_TCP                        1
 
-/*
-   ----------------------------------
-   ---------- Pbuf options ----------
-   ----------------------------------
-*/
 /**
  * PBUF_LINK_HLEN: the number of bytes that should be allocated for a
  * link level header. The default is 14, the standard value for
@@ -315,43 +237,21 @@ extern "C" {
  */
 #define PBUF_LINK_HLEN                  16
 
-/*
-   ------------------------------------
-   ---------- LOOPIF options ----------
-   ------------------------------------
-*/
 /**
  * LWIP_HAVE_LOOPIF==1: Support loop interface (127.0.0.1) and loopif.c
  */
 #define LWIP_HAVE_LOOPIF                0
-
-
-/*
-   ----------------------------------------------
-   ---------- Sequential layer options ----------
-   ----------------------------------------------
-*/
 
 /**
  * LWIP_NETCONN==1: Enable Netconn API (require to use api_lib.c)
  */
 #define LWIP_NETCONN                    0
 
-/*
-   ------------------------------------
-   ---------- Socket options ----------
-   ------------------------------------
-*/
 /**
  * LWIP_SOCKET==1: Enable Socket API (require to use sockets.c)
  */
 #define LWIP_SOCKET                     0
 
-/*
-   ----------------------------------------
-   ---------- Statistics options ----------
-   ----------------------------------------
-*/
 /**
  * LWIP_STATS==1: Enable statistics collection in lwip_stats.
  */
